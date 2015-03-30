@@ -42,7 +42,7 @@ exports.page = function(title, navbar, content) {
     ];
     return template
         .join('\n')
-        .replace('{title}', title, 'g')
+        .replace(/\{title\}/g, title)
         .replace('{navbar}', navbar, 'g')
         .replace('{content}', content, 'g');
 }
