@@ -7,8 +7,8 @@ var logger = require('express-logger');
 var bodyParser = require('body-parser');
 var layout = require('express-layout');
 
-var nmDbEngine = 'sqlite3';
-//var nmDbEngine = 'mongoose';
+//var nmDbEngine = 'sqlite3';
+var nmDbEngine = 'mongoose';
 var notesdb = require('./notesdb-' + nmDbEngine);
 
 var app = express();
