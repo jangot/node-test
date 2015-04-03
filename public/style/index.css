@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+}
+nav {
+    width: 200px;
+    border: 1px green solid;
+}
+.content {
+    padding: 20px;
+    border: 1px red solid;
+}

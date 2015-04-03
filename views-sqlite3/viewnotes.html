@@ -1,0 +1,25 @@
+<div>
+    <% notes.forEach(function(note){ %>
+    <div>
+            <p>
+                <%= new Date(note.ts).toString() %>:<br/>
+                by <b><%= note.author %></b>
+            </p>
+            <p>
+                <%= note.note %>
+            </p>
+    </div>
+    <div style="display: flex;">
+        <form action="/del" method="GET">
+            <input type="submit" value="Delete"/>
+            <input type="hidden" name="id" value="<%= note.ts %>"/>
+        </form>
+        <div>&nbsp;</div>
+        <form action="/edit" method="GET">
+            <input type="submit" value="Edit"/>
+            <input type="hidden" name="id" value="<%= note.ts %>"/>
+        </form>
+    </div>
+    <hr/>
+    <% }); %>
+</div>
